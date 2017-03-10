@@ -1,0 +1,244 @@
+
+rm -f obj/*.o *~ core /*~ pj1
+gcc -ansi -pedantic-errors -Wall -c -o obj/main.o main.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/printFunctions.o printFunctions.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/stubs.o stubs.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/getaddress.o getaddress.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/databaseFunctions.o databaseFunctions.c -I../include
+gcc -o pj1 obj/main.o obj/printFunctions.o obj/stubs.o obj/getaddress.o obj/databaseFunctions.o -I../include  -lm
+-----------------------------
+|   TEST 1: pj1 no args     |
+-----------------------------
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : {
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Exiting Program Now
+

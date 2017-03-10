@@ -1,0 +1,2012 @@
+Script started on Thu Mar 09 16:24:00 2017
+uhx01% ./testS  ^C
+uhx01% bash
+bash-3.2$ ./testScript 
+rm -f obj/*.o *~ core /*~ pj1
+gcc -ansi -pedantic-errors -Wall -c -o obj/main.o main.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/printFunctions.o printFunctions.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/stubs.o stubs.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/getaddress.o getaddress.c -I../include
+gcc -ansi -pedantic-errors -Wall -c -o obj/databaseFunctions.o databaseFunctions.c -I../include
+gcc -o pj1 obj/main.o obj/printFunctions.o obj/stubs.o obj/getaddress.o obj/databaseFunctions.o -I../include  -lm
+-----------------------------
+|   TEST 1: pj1 no args     |
+-----------------------------
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : {
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+Exiting Program Now
+
+-----------------------------
+|   TEST 2: pj1 debug       |
+-----------------------------
+Function : readfile(  , saveAccounts.txt)
+Function : printMenu()
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                               debug mode on                                  |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+Function : print7()
+Function : printDefault()
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+Function : printEnter()
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+Function : printEnter()
+
+Enter a number from the menu : Function : print1(  )
+Function : printGetAccountno()
+
+Enter account number : Function : printGetName()
+
+Enter name (must be less than 25 characters) : Function : printGetaddress()
+
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: Function : getaddress(ÿ¿ú¸ÿ"ºP, 80)
+Function : addRecord(  , 12345, Brock Smith
+, 22345 South Ave
+Jefferson SC 99645
+
+)
+Function : printEnter()
+
+Enter a number from the menu : Function : print1(  )
+Function : printGetAccountno()
+
+Enter account number : Function : printGetName()
+
+Enter name (must be less than 25 characters) : Function : printGetaddress()
+
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: Function : getaddress(22345 South Ave
+Jefferson SC 99645
+
+, 80)
+Function : addRecord(  , 12345, Brock Sith
+, 33445 South Ave
+Jefferson SC 99645
+
+)
+Function : printEnter()
+
+Enter a number from the menu : Function : print4(  )
+Function : printAllRecords(  )
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+Function : printEnter()
+
+Enter a number from the menu : Function : print2(  )
+Function : printGetAccountno()
+
+Enter account number : Function : printGetaddress()
+
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: Function : getaddress(, 80)
+Function : modifyRecord(  , 12345, 22345 South Ave
+Jefferson SC 99645
+
+)
+Function : printEnter()
+
+Enter a number from the menu : Function : print3(  )
+Function : printGetAccountno()
+
+Enter account number : Function : printAllRecords(  )
+{
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+Function : printEnter()
+
+Enter a number from the menu : Function : print4(  )
+Function : printAllRecords(  )
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12345
+Brock Sith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+Function : printEnter()
+
+Enter a number from the menu : Function : print5(  )
+Function : printGetAccountno()
+
+Enter account number : Function : deleteRecord(  , 12345)
+Function : printEnter()
+
+Enter a number from the menu : Function : print4(  )
+Function : printAllRecords(  )
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+Function : printEnter()
+
+Enter a number from the menu : Function : print7()
+Function : printDefault()
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+Function : printEnter()
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+Function : printEnter()
+
+Enter a number from the menu : Function : printDefault()
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+Function : printEnter()
+
+Enter a number from the menu : Function : printDefault()
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+Function : printEnter()
+
+Enter a number from the menu : Function : printDefault()
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+Function : printEnter()
+
+Enter a number from the menu : Function : print6()
+
+Exiting Program Now
+
+Function : writefile(  , saveAccounts.txt)
+-----------------------------
+|   TEST 3: pj1 debug junk  |
+-----------------------------
+Function : printError()
+
+Usage : pj1 [option]
+
+     debug : This option will print out extra information while the program is
+             running, for debugging purposes.
+
+-----------------------------
+|   TEST 4: pj1 junk        |
+-----------------------------
+
+Usage : pj1 [option]
+
+     debug : This option will print out extra information while the program is
+             running, for debugging purposes.
+
+-----------------------------
+|   TEST 5: pj1 no file      |
+-----------------------------
+databaseFunctions.c   main.c                obj                   printFunctions.c      saveAccountCopy.txt   tempSaveAccounts.txt
+getaddress.c          Makefile              pj1                   proofs                stubs.c
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+}
+-----------------------------
+|   TEST 6: pj1 empty file  |
+-----------------------------
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+}
+-----------------------------
+| TEST 7: pre-made save file|
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12222
+Brock Luis
+33445 South Ave
+Jefferson SC 99645
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+-----------------------------
+|TEST 8:add front middle end|
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+11111
+Alexander Dorthmouth
+8348 Parker Ave
+Flourence, NM 66345
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+12347
+Alex Mund
+1234 Jackson St.
+Flourence, NM 66345
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+{
+99999
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+-----------------------------
+|TEST 9: delete frt, md, end|
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+-----------------------------
+|TEST 10: delete multiples  |
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+-----------------------------
+|TEST 11:modify frt, md, end|
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Dave
+modified address
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+modified address
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+modified address
+
+}
+-----------------------------
+|TEST 12: modify multiples  |
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Jefferson Davis
+modified address
+
+}
+{
+12344
+Jefferson Davis
+modified address
+
+}
+{
+12344
+Dave
+modified address
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+-----------------------------
+|TEST 13: printAllREcords   |
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+-----------------------------
+| TEST 14: print by acc num |
+-----------------------------
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : {
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+
+Enter a number from the menu : 
+Enter account number : {
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+
+Enter a number from the menu : 
+Enter account number : {
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+
+Enter a number from the menu : 
+Enter account number : {
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+
+Enter a number from the menu : 
+Enter account number : {
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+-----------------------------
+| TEST 15: print multiples  |
+-----------------------------
+
+ -------------------------------------------------------------------------------
+|                              BANKING PROGRAM                                 |
+|      ----------------------------------------------------------------        |
+|                                                                              |
+|                                    menu                                      |
+ -------------------------------------------------------------------------------
+
+
+Make a selection by typing the number of that option and then pressing enter
+Or type 7 and press enter for help
+
+
+Enter a number from the menu : 
+(1) : Add a new record in the database
+(2) : Modify a record in the database using the accountno as the key
+(3) : Print information about a record using the accountno as the key
+(4) : Print all information in the database
+(5) : Delete an existing record from the database using the accountno as a key
+(6) : Quit the program
+(7) : Help
+
+
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : 
+Enter account number : 
+Enter name (must be less than 25 characters) : 
+Press Enter after each line and hold Enter when finished entering address
+(Must be less than 80 characters long)
+
+Enter address: 
+Enter a number from the menu : {
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+
+Enter a number from the menu : 
+Enter account number : {
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+
+Enter a number from the menu : 
+Exiting Program Now
+
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+}
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+bash-3.2$ ls
+include       project1.zip  proof.txt     src           testScript    tests.txt
+bash-3.2$ cd src
+bash-3.2$ ls
+databaseFunctions.c   main.c                obj                   printFunctions.c      saveAccountCopy.txt   stubs.c
+getaddress.c          Makefile              pj1                   proofs                saveAccounts.txt      tempSaveAccounts.txt
+bash-3.2$ cat saveAccounts.txt 
+{
+12344
+Dave
+9845 Holden Lane,
+Kazakstan, WY 54367
+
+}
+{
+12346
+John
+677 Golf Place,
+Hoosher, IL 88998
+
+}
+{
+14567
+Ralf
+33024 Shooster Street,
+Apt. c
+Morgan, OH 54237
+
+}
+{
+21111
+Mike
+436 Horten Rd.
+Fuller, AZ 46982
+
+}
+{
+23478
+Tomm
+684 Gnome St.
+Gento, FL 99283
+
+}
+bash-3.2$ exit
+exit
+uhx01% exit
+uhx01% 
+script done on Thu Mar 09 16:26:36 2017

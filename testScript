@@ -1,0 +1,418 @@
+#!/bin/bash
+#test script for project 1
+
+cd src/
+
+make clean
+make
+
+#tests for pj1, no arguments
+echo "-----------------------------"
+echo "|   TEST 1: pj1 no args     |"
+echo "-----------------------------"
+cp saveAccounts.txt tempSaveAccounts.txt
+
+./pj1 <<EOF
+
+1
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+1
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+4
+
+2
+12345
+22345 South Ave
+Jefferson SC 99645
+
+3
+12345
+4
+5
+12345
+4
+7
+
+junk
+12345
+!@#$%^&*()
+
+6
+EOF
+
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1, debug
+echo "-----------------------------"
+echo "|   TEST 2: pj1 debug       |"
+echo "-----------------------------"
+
+./pj1 debug <<EOF
+1
+12345
+Brock Smith
+22345 South Ave
+Jefferson SC 99645
+
+1
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+4
+
+2
+12345
+22345 South Ave
+Jefferson SC 99645
+
+3
+12345
+4
+5
+12345
+4
+7
+
+junk
+12345
+!@#$%^&*()
+
+6
+EOF
+
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1, junk
+echo "-----------------------------"
+echo "|   TEST 3: pj1 debug junk  |"
+echo "-----------------------------"
+
+./pj1 debug junk
+
+
+#tests for pj1, junk
+echo "-----------------------------"
+echo "|   TEST 4: pj1 junk        |"
+echo "-----------------------------"
+
+./pj1 junk
+
+
+
+#tests for pj1 (no save file)
+echo "-----------------------------"
+echo "|   TEST 5: pj1 no file      |"
+echo "-----------------------------"
+
+mv saveAccounts.txt tempSaveAccounts.txt
+ls
+./pj1 <<EOF
+1
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+6
+
+EOF
+cat saveAccounts.txt
+
+#tests for pj1 (empty save file)
+echo "-----------------------------"
+echo "|   TEST 6: pj1 empty file  |"
+echo "-----------------------------"
+
+rm saveAccounts.txt
+touch saveAccounts.txt
+cat saveAccounts.txt
+./pj1 <<EOF
+1
+12345
+Brock Sith
+33445 South Ave
+Jefferson SC 99645
+
+6
+
+EOF
+cat saveAccounts.txt
+rm saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 (pre-made save file)
+echo "-----------------------------"
+echo "| TEST 7: pre-made save file|"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+1
+12222
+Brock Luis
+33445 South Ave
+Jefferson SC 99645
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 add front, middle end
+echo "-----------------------------"
+echo "|TEST 8:add front middle end|"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+1
+11111
+Alexander Dorthmouth
+8348 Parker Ave
+Flourence, NM 66345
+
+1
+12347
+Alex Mund
+1234 Jackson St.
+Flourence, NM 66345
+
+1
+99999
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 delete front, middle end
+echo "-----------------------------"
+echo "|TEST 9: delete frt, md, end|"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+5
+12344
+
+5
+14567
+
+5
+23478
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 delete multiple
+echo "-----------------------------"
+echo "|TEST 10: delete multiples  |"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+6
+
+EOF
+
+cat saveAccounts.txt
+
+./pj1 <<EOF
+5
+12344
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 modify front, middle end
+echo "-----------------------------"
+echo "|TEST 11:modify frt, md, end|"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+2
+12344
+modified address
+
+2
+14567
+modified address
+
+2
+23478
+modified address
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 modify multiple
+echo "-----------------------------"
+echo "|TEST 12: modify multiples  |"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+6
+
+EOF
+
+cat saveAccounts.txt
+
+./pj1 <<EOF
+2
+12344
+modified address
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 printAllRecords
+echo "-----------------------------"
+echo "|TEST 13: printAllREcords   |"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+4
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 printRecord
+echo "-----------------------------"
+echo "| TEST 14: print by acc num |"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+cat saveAccounts.txt
+
+./pj1 <<EOF
+3
+12344
+
+3
+12346
+
+3
+14567
+
+3
+21111
+
+3
+23478
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
+
+#tests for pj1 print multiple
+echo "-----------------------------"
+echo "| TEST 15: print multiples  |"
+echo "-----------------------------"
+
+cp saveAccounts.txt tempSaveAccounts.txt
+
+./pj1 <<EOF
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+1
+12344
+Jefferson Davis
+2390 North Bacoln Pl.
+Ford Bend, FL 24951
+
+4
+
+3
+12344
+
+6
+
+EOF
+
+cat saveAccounts.txt
+cp tempSaveAccounts.txt saveAccounts.txt
